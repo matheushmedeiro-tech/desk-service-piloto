@@ -1,0 +1,82 @@
+{
+  "name": "Ticket",
+  "type": "object",
+  "properties": {
+    "ticket_number": {
+      "type": "string",
+      "title": "N\u00famero do Chamado"
+    },
+    "title": {
+      "type": "string",
+      "title": "T\u00edtulo"
+    },
+    "description": {
+      "type": "string",
+      "title": "Descri\u00e7\u00e3o"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "aberto",
+        "em_atendimento",
+        "aguardando_usuario",
+        "resolvido",
+        "fechado"
+      ],
+      "default": "aberto"
+    },
+    "urgency": {
+      "type": "string",
+      "title": "Urg\u00eancia",
+      "enum": [
+        "baixa",
+        "media",
+        "alta",
+        "critica"
+      ],
+      "default": "media"
+    },
+    "requester_name": {
+      "type": "string",
+      "title": "Nome do Solicitante"
+    },
+    "requester_email": {
+      "type": "string",
+      "title": "E-mail do Solicitante"
+    },
+    "requester_department": {
+      "type": "string",
+      "title": "Setor"
+    },
+    "assigned_to": {
+      "type": "string",
+      "title": "Atribu\u00eddo a"
+    },
+    "assigned_to_email": {
+      "type": "string",
+      "title": "E-mail do T\u00e9cnico"
+    },
+    "attachment_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "title": "Anexos"
+    },
+    "resolved_at": {
+      "type": "string",
+      "title": "Resolvido em"
+    },
+    "closed_at": {
+      "type": "string",
+      "title": "Fechado em"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "urgency",
+    "requester_name"
+  ]
+}

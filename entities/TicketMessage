@@ -1,0 +1,40 @@
+{
+  "name": "TicketMessage",
+  "type": "object",
+  "properties": {
+    "ticket_id": {
+      "type": "string",
+      "title": "ID do Chamado"
+    },
+    "content": {
+      "type": "string",
+      "title": "Mensagem"
+    },
+    "author_name": {
+      "type": "string",
+      "title": "Autor"
+    },
+    "author_role": {
+      "type": "string",
+      "title": "Papel do Autor",
+      "enum": [
+        "user",
+        "it",
+        "admin"
+      ]
+    },
+    "attachment_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "title": "Anexos"
+    }
+  },
+  "required": [
+    "ticket_id",
+    "content",
+    "author_name",
+    "author_role"
+  ]
+}

@@ -16,5 +16,8 @@ export default defineConfig({
       visualEditAgent: true
     }),
     react(),
-  ]
+  ],
+  preview: {
+    allowedHosts: ["desk-service-piloto.onrender.com"]
+  }
 });
